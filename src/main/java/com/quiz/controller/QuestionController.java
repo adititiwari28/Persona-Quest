@@ -64,7 +64,7 @@ public class QuestionController {
 	     q.setOptc(optc);
 
 	     quesDao.updateQuestion(q);
-	     return "redirect:/editQ";
+	     return "redirect:/viewQ";
 	 }
 
 	 
@@ -106,7 +106,7 @@ public class QuestionController {
 	     List<Question> questions = quesDao.getAllQuestion();
 	     model.addAttribute("questions", questions);
 	     model.addAttribute("actionType", "delete");
-	     return "deleteQ";
+	     return "viewQ";
 	 }
 	 
 	 @GetMapping("/addQ")
@@ -129,7 +129,7 @@ public class QuestionController {
 	     q.setOptc(optc);
 
 	     quesDao.insertQuestion(q);
-	     return "redirect:/editQ";
+	     return "redirect:/viewQ";
 	 }
 
 
